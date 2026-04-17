@@ -1,9 +1,3 @@
-
-# 下面这两行只要别用6.15版本的CubeMX就不需要自己手动添加。
-# Include toolchain file
-include("cmake/gcc-arm-none-eabi.cmake")
-
-
 # Add USER generated sources
 add_subdirectory(cmake/user)
 
