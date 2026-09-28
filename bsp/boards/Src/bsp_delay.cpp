@@ -1,4 +1,4 @@
-#include "bsp_delay.h"
+#include "bsp_delay.hpp"
 #include "main.h"
 
 namespace

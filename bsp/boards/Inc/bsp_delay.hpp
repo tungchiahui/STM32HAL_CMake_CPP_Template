@@ -1,5 +1,5 @@
-#ifndef BSP_DELAY_H
-#define BSP_DELAY_H
+#ifndef BSP_DELAY_HPP
+#define BSP_DELAY_HPP
 
 #include <stdint.h>
 
