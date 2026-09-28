@@ -1,33 +1,17 @@
-#ifndef __CPP_INTERFACE_H_
-#define __CPP_INTERFACE_H_
+#ifndef CPP_INTERFACE_H
+#define CPP_INTERFACE_H
 
 #ifdef __cplusplus
-extern "C"
-{
+extern "C" {
 #endif
 
-#include "main.h"
-#include "struct_typedef.h"
-
-/******************define_config********************/
-//ÊÇ·ñÎªÂã»ú¿ª·¢:
-//Èç¹ûÊÇÂã»ú¿ª·¢£¬ÔòÌî0¡£
-//Èç¹ûÊÇFreeRTOS¿ª·¢£¬ÔòÌî1¡£
-//Èç¹ûÊÇUOS¿ª·¢£¬ÔòÌîxxxx¡£(´ı¿ª·¢Ïà¹Ø´úÂë)
+// 0ï¼šè£¸æœºï¼›1ï¼šFreeRTOSã€‚ä¿ç•™ç°æœ‰åº”ç”¨å…¥å£è¡Œä¸ºã€‚
 #define isRTOS 0
 
-#if isRTOS == 1
-#include "cmsis_os.h"
-#endif
-
-
-	
 void cpp_main(void);
-	
-	
 
 #ifdef __cplusplus
 }
 #endif
-	
+
 #endif

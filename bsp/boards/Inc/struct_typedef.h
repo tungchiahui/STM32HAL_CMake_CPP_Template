@@ -1,19 +1,11 @@
-#ifndef __STRUCT_TYPEDEF_H_
-#define __STRUCT_TYPEDEF_H_
+#ifndef STRUCT_TYPEDEF_H
+#define STRUCT_TYPEDEF_H
 
-#ifdef __cplusplus
-extern "C" {
-    #endif
+#include <stdint.h>
+#include <stdbool.h>
 
-    #include <stdint.h>
-    #include <stdbool.h>
-
-    typedef unsigned char bool_t;
-    typedef float fp32;
-    typedef double fp64;
-
-    #ifdef __cplusplus
-}
-#endif
+typedef unsigned char bool_t;
+typedef float fp32;
+typedef double fp64;
 
 #endif

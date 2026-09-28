@@ -1,14 +1,10 @@
 #include "cpp_interface.h"
 
-
 void cpp_main(void)
 {
-
-	
-#if isRTOS==0    	//Èç¹ûÊÇÂã»ú¿ª·¢
-	for(;;)  //µÈÍ¬ÓÚwhile(true)
-	{
-
-	}
+#if isRTOS == 0  // è£¸æœºå¼€å‘
+    for (;;)
+    {
+    }
 #endif
 }

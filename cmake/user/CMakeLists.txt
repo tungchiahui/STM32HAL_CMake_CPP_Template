@@ -1,10 +1,21 @@
-cmake_minimum_required(VERSION 3.22)
-# Enable CMake support for ASM and C languages
-enable_language(C ASM)
+# 在根目录创建可执行目标后，再添加本目录。
+if(NOT DEFINED CMAKE_CXX_STANDARD)
+    set(CMAKE_CXX_STANDARD 20)
+endif()
+if(NOT DEFINED CMAKE_CXX_EXTENSIONS)
+    set(CMAKE_CXX_EXTENSIONS ON)
+endif()
+set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
+    CXX_STANDARD ${CMAKE_CXX_STANDARD}
+    CXX_STANDARD_REQUIRED ON
+    CXX_EXTENSIONS ${CMAKE_CXX_EXTENSIONS}
+)
 
 # 添加用户自己的头文件目录
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/../../applications/Inc
+)
+target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/../../bsp/boards/Inc
 )
 

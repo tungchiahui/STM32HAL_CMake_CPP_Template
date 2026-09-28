@@ -1,41 +1,35 @@
-#ifndef __BSP_DELAY_H_
-#define __BSP_DELAY_H_
+#ifndef BSP_DELAY_H
+#define BSP_DELAY_H
 
-#ifdef __cplusplus
-extern "C" 
-{
-#endif
+#include <stdint.h>
 
-#include "cpp_interface.h"
-
+// 仅供 C++ 使用；sysclk 是以 MHz 为单位的 CPU 时钟频率。
 class BSP_Delay
 {
-	public:
-		class F1
-		{
-			public:
-				void Init(uint16_t sysclk);
-				void us(uint32_t nus);
-				void ms(uint16_t nms);
-		}f1;
-		class F4
-		{
-			public:
-				void Init(uint16_t sysclk);
-				void us(uint32_t nus);
-				void ms(uint16_t nms);
-		}f4;
-		class FreeRTOS
-		{
-			public:
-				void Init(void);
-		}freertos;
-};
-/*******对象*******/
-extern BSP_Delay bsp_delay;
+public:
+    class F1
+    {
+    public:
+        void Init(uint16_t sysclk);
+        void us(uint32_t nus);
+        void ms(uint16_t nms);
+    } f1;
 
-#ifdef __cplusplus
-}
-#endif
+    class F4
+    {
+    public:
+        void Init(uint16_t sysclk);
+        void us(uint32_t nus);
+        void ms(uint16_t nms);
+    } f4;
+
+    class FreeRTOS
+    {
+    public:
+        void Init(void);
+    } freertos;
+};
+
+extern BSP_Delay bsp_delay;
 
 #endif
