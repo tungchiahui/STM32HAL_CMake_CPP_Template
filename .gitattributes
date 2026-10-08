@@ -1,0 +1,4 @@
+# Exclude generated STM32Cube code and third-party vendor sources from GitHub Linguist statistics.
+Core/** linguist-generated=true
+Drivers/** linguist-vendored=true
+Middlewares/** linguist-vendored=true
