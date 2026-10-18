@@ -13,18 +13,19 @@ set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
 
 # 添加用户自己的头文件目录
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../applications/Inc
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../bsp/boards/Inc
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../applications/
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../bsp/boards/
 )
 
+# 添加源文件
 set(Applications_Src
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../applications/Src/cpp_interface.cpp
-    # ${CMAKE_CURRENT_SOURCE_DIR}/../../applications/Src/xxx.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../applications/main/cpp_interface.cpp
+    # ${CMAKE_CURRENT_SOURCE_DIR}/../../applications/xxx/xxx.cpp
 )
 
 set(Bsp_Boards_Src
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../bsp/boards/Src/bsp_delay.cpp
-    # ${CMAKE_CURRENT_SOURCE_DIR}/../../bsp/boards/Src/xxx.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../bsp/boards/delay/bsp_delay.cpp
+    # ${CMAKE_CURRENT_SOURCE_DIR}/../../bsp/boards/xxx/xxx.cpp
 )
 
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE 

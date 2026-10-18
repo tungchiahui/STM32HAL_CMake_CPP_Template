@@ -1,4 +1,4 @@
-#include "cpp_interface.h"
+#include "main/cpp_interface.h"
 
 void cpp_main(void)
 {
