@@ -14,11 +14,8 @@ set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
 # 添加用户自己的头文件目录
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/../../applications/Inc
-)
-target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/../../bsp/boards/Inc
 )
-
 
 set(Applications_Src
     ${CMAKE_CURRENT_SOURCE_DIR}/../../applications/Src/cpp_interface.cpp
